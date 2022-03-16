@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
     println("(Aura: $auraColor)" + "(Blessed: ${if (isBlessed) "YES" else "NO"})")
     println("$userName $healthStatus")
+    println("xyi")
 }
 
 private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String = when (healthPoints) {
