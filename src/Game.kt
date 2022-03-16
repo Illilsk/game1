@@ -5,10 +5,7 @@ fun main(args: Array<String>) {
     val isImmortal = false
     var auraVisible = isBlessed && healthPoints > 50 || isImmortal
     val auraColor = if (auraVisible) "Green aura" else "None aura"
-    val healthStatus = formatHealthStatus(healthPoints, isBlessed)
-    println("(Aura: $auraColor)" + "(Blessed: ${if (isBlessed) "YES" else "NO"})")
-    println("$userName $healthStatus")
-    println("xyi")
+    println("(HP: $healthPoints)(Aura: $auraColor) -> $userName ${formatHealthStatus(healthPoints, isBlessed)}")
 }
 
 private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String = when (healthPoints) {
